@@ -10,8 +10,6 @@ This is an app that displays you details of movies that you can search for or br
 <li>Search Functionality</li>
 
 </ul>
-Video Demo: https://youtu.be/5_bDIUYLWzg <br><br>
-<a href ="https://play.google.com/store/apps/details?id=com.bimsina.movies"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
 
 ## Scrennshots :
 
