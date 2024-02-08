@@ -14,7 +14,7 @@ Video Demo: https://youtu.be/5_bDIUYLWzg <br><br>
 <a href ="https://play.google.com/store/apps/details?id=com.bimsina.movies"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
 Screenshots:<br>
 
-![Screenshot 2024-02-08 142434](https://github.com/Jeant10/movie_app/assets/74752987/1d4bcaad-4104-407c-a4be-01143b5a347d)
+![Screenshot 2024-02-08 142434](https://github.com/Jeant10/movie_app/assets/74752987/1d4bcaad-4104-407c-a4be-01143b5a347d) ![Screenshot 2024-02-08 142458](https://github.com/Jeant10/movie_app/assets/74752987/81379c54-34da-47b7-a8bf-1201b58b765f)
 
 <table style={border:"none"}><tr>
   
