@@ -13,8 +13,11 @@ This is an app that displays you details of movies that you can search for or br
 Video Demo: https://youtu.be/5_bDIUYLWzg <br><br>
 <a href ="https://play.google.com/store/apps/details?id=com.bimsina.movies"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
 Screenshots:<br>
+
+![Screenshot 2024-02-08 142434](https://github.com/Jeant10/movie_app/assets/74752987/1d4bcaad-4104-407c-a4be-01143b5a347d)
+
 <table style={border:"none"}><tr>
-  ![Screenshot 2024-02-08 142434](https://github.com/Jeant10/movie_app/assets/74752987/1d4bcaad-4104-407c-a4be-01143b5a347d)
+  
 <td><img src="https://user-images.githubusercontent.com/29589003/58170608-93aba280-7cb3-11e9-933f-395501d7a5a0.png" alt="Screenshot 1"/></td>
 <td><img src="https://user-images.githubusercontent.com/29589003/58170610-94443900-7cb3-11e9-946f-79587eaa1043.png" alt="Screenshot 3"/></td>
 
