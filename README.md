@@ -27,11 +27,11 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 ![Screenshot 2024-02-08 142808](https://github.com/Jeant10/movie_app/assets/74752987/3af81bb2-6003-49ed-91c6-a7fccbd2d86d) ![Screenshot 2024-02-08 143000](https://github.com/Jeant10/movie_app/assets/74752987/0313365c-39f1-45b9-a3af-8e909222211f)
 
 
-## To run this app
+## Para ejecutar esta aplicación
 
 <ol>
-<li>Obtain api key from <a href ="https://www.themoviedb.org/">TMDB</a>.</li>
-<li>Replace YOUR_API_KEY in api_constants.dart with your api key.</li>
-<li>Run the app with <b>flutter run --release</b></li>
+<li>Obtenga la clave API de <a href ="https://www.themoviedb.org/">TMDB</a>.</li>
+<li>Reemplace YOUR_API_KEY en api_constants.dart con su clave API.</li>
+<li>Ejecute la aplicación con flutter run --release</b></li>
 
 </ol>
