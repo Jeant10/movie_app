@@ -24,7 +24,9 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 
 ![Screenshot 2024-02-08 142738](https://github.com/Jeant10/movie_app/assets/74752987/8104b2c3-81f4-40dd-ae05-c98d6330b754) ![Screenshot 2024-02-08 142704](https://github.com/Jeant10/movie_app/assets/74752987/4a03949b-a67d-4283-b144-1b2c70f87df2) ![Screenshot 2024-02-08 142752](https://github.com/Jeant10/movie_app/assets/74752987/69a79210-6d48-43f6-97da-f9d722fb114c)
 
-![Screenshot 2024-02-08 142808](https://github.com/Jeant10/movie_app/assets/74752987/3af81bb2-6003-49ed-91c6-a7fccbd2d86d) ![Screenshot 2024-02-08 143000](https://github.com/Jeant10/movie_app/assets/74752987/0313365c-39f1-45b9-a3af-8e909222211f)
+![Screenshot 2024-02-08 142808](https://github.com/Jeant10/movie_app/assets/74752987/3af81bb2-6003-49ed-91c6-a7fccbd2d86d) ![Screenshot 2024-02-08 145411](https://github.com/Jeant10/movie_app/assets/74752987/7ed5ac65-fbb2-44e1-9309-ef0c7d3bab9a)
+
+![Screenshot 2024-02-08 143000](https://github.com/Jeant10/movie_app/assets/74752987/0313365c-39f1-45b9-a3af-8e909222211f) 
 
 
 ## Para ejecutar esta aplicación
