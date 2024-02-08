@@ -20,6 +20,7 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 <li>Boton de Like</li>
 <li>Perfil de Usuario</li>
 <li>Autenticacion con Firebase</li>
+<li>Verificacion por Correo</li>
 <li>SplashScreen</li>
 </ul>
 
