@@ -2,6 +2,14 @@
 
 Esta es una aplicación que muestra detalles de películas que puedes buscar o explorar.<br>
 
+## Integrantes :
+
+<ul>
+<li>Felipe Pazmiño</li>
+<li>Jean Tituaña</li>
+<li>Omar Guachamin</li>
+</ul>
+
 ## Caracteristicas Nuevas :
 
 <ul>
@@ -13,7 +21,6 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 <li>Perfil de Usuario</li>
 <li>Autenticacion con Firebase</li>
 <li>SplashScreen</li>
-  
 </ul>
 
 ## Scrennshots :
