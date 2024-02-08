@@ -1,9 +1,14 @@
 
-
+import 'package:firebase_auth/firebase_auth.dart' // new
+    hide EmailAuthProvider, PhoneAuthProvider;  
 import 'package:flutter/material.dart';
 import 'package:movies/screens/login.dart';
 import 'package:movies/theme/theme_state.dart';
 import 'package:provider/provider.dart';
+
+import '../app_state.dart';     
+import '../src/authentication.dart';
+import 'widgets.dart'; 
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -39,30 +44,51 @@ class _SettingsPageState extends State<SettingsPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: CircleAvatar(
-                              backgroundColor: state.themeData.accentColor,
-                              radius: 40,
-                              child: Icon(
-                                Icons.person_outline,
-                                size: 40,
-                                color: state.themeData.primaryColor,
-                              )),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(16.0),
+                        //   child: CircleAvatar(
+                        //       radius: 40,
+                        //       child: Icon(
+                        //         Icons.person_outline,
+                        //         size: 40,
+                        //         color: state.themeData.primaryColor,
+                        //       )
+                        //   ),
+                        // ),
+                        // TextButton(
+                        //   onPressed: () {
+                        //     Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) => LoginScreen(
+                        //                   themeData: state.themeData,
+                        //                 )));
+                        //   },
+                        //   child: Text(
+                        //     'Log In / Sign Up',
+                        //     style: state.themeData.textTheme.bodyText1,
+                        //   ),
+                        // )
+                       ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Padding(padding: 
+                            const EdgeInsets.only(left: 24, bottom: 8),
+                            child: Text(
+                              'Bienvenido',
+                              style: state.themeData.textTheme.bodyText1,
+                            ),),
+                          ],
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen(
-                                          themeData: state.themeData,
-                                        )));
-                          },
-                          child: Text(
-                            'Log In / Sign Up',
-                            style: state.themeData.textTheme.bodyText1,
-                          ),
+                       ),
+                        Consumer<ApplicationState>(
+                            builder: (context, appState, _) => AuthFunc(
+                              loggedIn: appState.loggedIn,
+                              signOut: () async {
+                                await FirebaseAuth.instance.signOut();
+                              },
+                            ),
                         ),
                       ],
                     ),
@@ -138,9 +164,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                       height: 50,
                                       child: state.themeData.primaryColor ==
                                               colors[index]
-                                          ? Icon(Icons.done,
-                                              color:
-                                                  state.themeData.accentColor)
+                                          ? Icon(Icons.done)
                                           : Container(),
                                     ),
                                   ),

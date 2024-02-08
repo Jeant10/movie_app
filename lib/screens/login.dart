@@ -12,8 +12,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: themeData!.primaryColor,
         leading: IconButton(
           icon: Icon(
-            Icons.clear,
-            color: themeData!.accentColor,
+            Icons.clear
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -24,6 +23,8 @@ class LoginScreen extends StatelessWidget {
           style: themeData!.textTheme.headline5,
         ),
       ),
+
+      
       body: Container(
         color: themeData!.primaryColor,
         child: Center(

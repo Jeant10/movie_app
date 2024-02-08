@@ -1,4 +1,4 @@
-package com.bimsina.movies
+package com.example.matinee_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

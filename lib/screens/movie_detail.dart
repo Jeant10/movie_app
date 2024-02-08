@@ -22,6 +22,8 @@ class MovieDetailPage extends StatefulWidget {
 }
 
 class _MovieDetailPageState extends State<MovieDetailPage> {
+  bool _isLiked = false;  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,11 +55,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                           gradient: LinearGradient(
                               begin: FractionalOffset.bottomCenter,
                               end: FractionalOffset.topCenter,
-                              colors: [
-                                widget.themeData.accentColor,
-                                widget.themeData.accentColor.withOpacity(0.3),
-                                widget.themeData.accentColor.withOpacity(0.2),
-                                widget.themeData.accentColor.withOpacity(0.1),
+                              colors:[
                               ],
                               stops: [
                                 0.0,
@@ -71,8 +69,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
               ),
               Expanded(
                 child: Container(
-                  color: widget.themeData.accentColor,
-                ),
+                )
               )
             ],
           ),
@@ -83,8 +80,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                 elevation: 0,
                 leading: IconButton(
                   icon: Icon(
-                    Icons.arrow_back,
-                    color: widget.themeData.accentColor,
+                    Icons.arrow_back
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -130,15 +126,38 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                           padding: const EdgeInsets.all(8.0),
                                           child: Row(
                                             children: <Widget>[
-                                              Text(
-                                                widget.movie.voteAverage!,
-                                                style: widget.themeData
-                                                    .textTheme.bodyText1,
+
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 4, bottom: 8),
+                                                child:
+                                                  Text(
+                                                    widget.movie.voteAverage!,
+                                                    style: widget.themeData
+                                                        .textTheme.bodyText1,
+                                                  ),
                                               ),
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.green,
+
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10, bottom: 8),
+                                                child:Icon(
+                                                  Icons.star,
+                                                  color: Colors.green,
+                                                ),
                                               ),
+
+                                              Padding(
+                                                padding: const EdgeInsets.only(left: 10, bottom: 8),
+                                                child: ElevatedButton.icon(
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      _isLiked = !_isLiked; // Cambiar el estado de liked a no liked y viceversa
+                                                    });
+                                                  },
+                                                  icon: _isLiked ? Icon(Icons.favorite) : Icon(Icons.favorite_border),
+                                                  label: Text(_isLiked ? 'Liked' : 'Like'),
+                                                ),
+                                              ),
+                                              
                                             ],
                                           ),
                                         )
@@ -303,8 +322,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                       child: Container(
                         decoration: BoxDecoration(
                             color: widget.themeData.primaryColor,
-                            border: Border.all(
-                                color: widget.themeData.accentColor, width: 3),
+                            border: Border.all(width: 3),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: (cast.profilePath == null

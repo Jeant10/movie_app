@@ -4,20 +4,33 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
-  http: 0.13.3
-  carousel_slider: 4.0.0
-  shared_preferences: 2.0.7
-  provider: 6.0.0
+  cupertino_icons: ^1.0.6
+  http: ^1.2.0
+  carousel_slider: ^4.2.1
+  shared_preferences: ^2.2.2
+  provider: ^6.1.1
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  firebase_ui_auth: ^1.13.0
+  go_router: ^13.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.2.16
+
+flutter_native_splash:
+  color: "#242248"
+  image: images/flutter-logo.png
+  android: true
+  web: true
+  ios: true
+
 
 flutter:
   uses-material-design: true

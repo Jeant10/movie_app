@@ -9,20 +9,109 @@ import 'package:movies/screens/settings.dart';
 import 'package:movies/screens/widgets.dart';
 import 'package:movies/theme/theme_state.dart';
 import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart'; 
 
-void main() => runApp(MyApp());
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+
+import 'app_state.dart'; 
+void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(ChangeNotifierProvider(
+    create: (context) => ApplicationState(),
+    builder: ((context, child) => MyApp()),
+  ));
+}
+
+// Add GoRouter configuration outside the App class
+final _router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => MyHomePage(),
+      routes: [
+        GoRoute(
+          path: 'sign-in',
+          builder: (context, state) {
+            return SignInScreen(
+              actions: [
+                ForgotPasswordAction(((context, email) {
+                  final uri = Uri(
+                    path: '/sign-in/forgot-password',
+                    queryParameters: <String, String?>{
+                      'email': email,
+                    },
+                  );
+                  context.push(uri.toString());
+                })),
+                AuthStateChangeAction(((context, state) {
+                  final user = switch (state) {
+                    SignedIn state => state.user,
+                    UserCreated state => state.credential.user,
+                    _ => null
+                  };
+                  if (user == null) {
+                    return;
+                  }
+                  if (state is UserCreated) {
+                    user.updateDisplayName(user.email!.split('@')[0]);
+                  }
+                  if (!user.emailVerified) {
+                    user.sendEmailVerification();
+                    const snackBar = SnackBar(
+                        content: Text(
+                            'Please check your email to verify your email address'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                  context.pushReplacement('/');
+                })),
+              ],
+            );
+          },
+          routes: [
+            GoRoute(
+              path: 'forgot-password',
+              builder: (context, state) {
+                final arguments = state.uri.queryParameters;
+                return ForgotPasswordScreen(
+                  email: arguments['email'],
+                  headerMaxExtent: 200,
+                );
+              },
+            ),
+          ],
+        ),
+        GoRoute(
+          path: 'profile',
+          builder: (context, state) {
+            return ProfileScreen(
+              
+              providers: const [],
+              actions: [
+                SignedOutAction((context) {
+                  context.pushReplacement('/');
+                }),
+              ],
+            );
+          },
+        ),
+      ],
+    ),
+  ],
+);
+
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<ThemeState>(
       create: (_) => ThemeState(),
-      child: MaterialApp(
-        title: 'Matinee',
+      child: MaterialApp.router(
+        title: 'JPelis',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             primarySwatch: Colors.blue, canvasColor: Colors.transparent),
-        home: MyHomePage(),
+        routerConfig: _router,
       ),
     );
   }
@@ -50,11 +139,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       key: _scaffoldKey,
+
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
-            Icons.menu,
-            color: state.themeData.accentColor,
+            Icons.menu
           ),
           onPressed: () {
             _scaffoldKey.currentState?.openDrawer();
@@ -62,13 +151,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         centerTitle: true,
         title: Text(
-          'Matinee',
+          'JPELIS',
           style: state.themeData.textTheme.headline5,
         ),
         backgroundColor: state.themeData.primaryColor,
         actions: <Widget>[
           IconButton(
-            color: state.themeData.accentColor,
             icon: Icon(Icons.search),
             onPressed: () async {
               final Movie? result = await showSearch<Movie?>(
@@ -89,6 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
+      
       drawer: Drawer(
         child: SettingsPage(),
       ),
