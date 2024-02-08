@@ -2,7 +2,7 @@
 
 Esta es una aplicación que muestra detalles de películas que puedes buscar o explorar.<br>
 
-## Features :
+## Caracteristicas Nuevas :
 
 <ul>
 <li>Obtenga datos de API de TMDB de forma asincrónica.</li>
