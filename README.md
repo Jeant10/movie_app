@@ -45,3 +45,7 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 <li>Ejecute la aplicación con flutter run --release</b></li>
 
 </ol>
+
+## Repositorio original 
+
+<a href="https://github.com/bimsina/Matinee-Flutter">TMDB Movie App</a>
