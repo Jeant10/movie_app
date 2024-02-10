@@ -26,11 +26,11 @@ Esta es una aplicación que muestra detalles de películas que puedes buscar o e
 
 ## Links :
 
-Los Link de la APK se encuentran 👉 <a href="https://drive.google.com/drive/folders/1Y4Fd3wh3uPgC-YLrModWcTitKwH-tlrr?usp=drive_link.">aqui</a>
+El Link de la APK se encuentran 👉 <a href="https://drive.google.com/drive/folders/1Y4Fd3wh3uPgC-YLrModWcTitKwH-tlrr?usp=drive_link.">aqui</a>
 
 El link del repositorio original se encuentra 👉<a href="https://github.com/bimsina/Matinee-Flutter">TMDB Movie App</a>
 
-## Scrennshots :
+## Screenshots :
 
 ![Screenshot 2024-02-08 142434](https://github.com/Jeant10/movie_app/assets/74752987/1d4bcaad-4104-407c-a4be-01143b5a347d) ![Screenshot 2024-02-08 142458](https://github.com/Jeant10/movie_app/assets/74752987/81379c54-34da-47b7-a8bf-1201b58b765f) ![Screenshot 2024-02-08 142529](https://github.com/Jeant10/movie_app/assets/74752987/6bc3ac20-fd9c-44e7-b263-6abdea640431)
 
