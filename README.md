@@ -2,6 +2,8 @@
 
 Esta es una aplicación que muestra detalles de películas que puedes buscar o explorar.<br>
 
+Los Link de la APK se encuentran 👉 <a href="https://drive.google.com/drive/folders/1Y4Fd3wh3uPgC-YLrModWcTitKwH-tlrr?usp=drive_link.">aqui</a>
+
 ## Integrantes :
 
 <ul>
